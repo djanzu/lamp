@@ -9,9 +9,10 @@ services:
   php:
     build: ./php
     ports:
-      - '80:80'
+      - '8000:80'
     volumes:
       - ./html:/var/www/html
+      - ./php/php.ini:/usr/local/etc/php/php.ini
     depends_on:
       - mysql
 volumes:
