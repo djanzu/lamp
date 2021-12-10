@@ -9,5 +9,7 @@ RUN docker-php-ext-install pdo_mysql mysqli mbstring iconv
 RUN pecl channel-update pecl.php.net
 RUN pecl install xdebug mcrypt
 RUN docker-php-ext-enable xdebug mcrypt
+RUN apt-get install -y lsof
 EXPOSE 80
+EXPOSE 9003
 
